@@ -9,30 +9,25 @@ router.post('/', (req, res) => {
   console.log(req.body);
 
   const data = readData();
+  
   const result = eval(`${parentNumber} ${operation} ${number}`);
+
+  const formattedResult = parseFloat(result.toFixed(2));
 
   const newOperation = {
     id: uuidv4(),
     number1: parentNumber,
     operand: operation,
     number2: number,
-    result,
+    result: formattedResult,
     userId,
     username: data.users.find(user => user.id === userId).username
   };
-  
 
   const calculationData = findCalculationById(data, calculationId);
 
   if (!calculationData) {
     return res.status(404).json({ message: 'Calculation not found' });
-  }
-
-  if (calculationData.type === 'calculation' && calculationData.item.userId !== userId) {
-    return res.status(403).json({ message: 'Unauthorized user' });
-  }
-  if (calculationData.type === 'operation' && calculationData.item.userId !== userId) {
-    return res.status(403).json({ message: 'Unauthorized user' });
   }
 
   if (calculationData.type === 'calculation') {

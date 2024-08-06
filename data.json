@@ -1,208 +1,72 @@
 {
   "users": [
     {
-      "id": "893899f3-b189-4e59-8287-b9e361ce5afa",
-      "username": "her",
-      "password": "123"
-    },
-    {
-      "id": "d242e38c-6744-4b00-94f5-529822dfa179",
-      "username": "bilal",
-      "password": "123"
-    },
-    {
-      "id": "6a3347da-d99f-45c4-880b-da0bd6b78e98",
-      "username": "kjkk",
-      "password": "y776"
-    },
-    {
       "id": "7330f007-8bff-4bdc-9082-40148a91e495",
       "username": "admin",
       "password": "admin"
     },
     {
-      "id": "562e6a7e-cd43-4ce4-b321-9a2064157a0b",
-      "username": "testuser",
-      "password": "password123"
-    },
-    {
-      "id": "0bb345aa-2ff6-4b18-9fee-3f1fe33e6e82",
-      "username": "existinguser",
-      "password": "password123"
-    },
-    {
-      "id": "69127893-97a6-4702-9462-8d5b5b81a403",
-      "username": "authuser",
-      "password": "password123"
-    },
-    {
-      "id": "36314ac8-6515-4b5d-9c30-cb17ffdf3ff2",
-      "username": "calcuser",
-      "password": "password123"
-    },
-    {
-      "id": "be56922a-a862-410c-bc99-c8c9ce51ccb0",
-      "username": "operationuser",
-      "password": "password123"
+      "id": "28f42565-6d23-4976-9184-f20deeb19ea2",
+      "username": "abdullah",
+      "password": "1234"
     }
   ],
   "calculations": [
     {
-      "id": "8deb727c-e15c-482f-ad01-a8bfb138ad74",
-      "number": 3,
+      "id": "cca1c248-f3ca-499a-ae20-fa5cb7298606",
+      "number": 45,
       "operations": [
         {
-          "id": "dd12610f-0661-46a3-bc3a-4879344cb7ae",
-          "number1": 3,
+          "id": "377e4da5-7c75-4371-8b02-46771c3c5fb8",
+          "number1": 45,
           "operand": "+",
-          "number2": 4,
-          "result": 7,
-          "userId": "893899f3-b189-4e59-8287-b9e361ce5afa",
-          "subOperations": [
-            {
-              "id": "e54ae8f1-6592-4f05-8b06-f6ad4dc25ea1",
-              "number1": 7,
-              "operand": "*",
-              "number2": 2,
-              "result": 14,
-              "userId": "893899f3-b189-4e59-8287-b9e361ce5afa",
-              "subOperations": []
-            },
-            {
-              "id": "09d72951-1ae1-4605-943d-c77cee6fe155",
-              "number1": 7,
-              "operand": "+",
-              "number2": 3,
-              "result": 10,
-              "userId": "893899f3-b189-4e59-8287-b9e361ce5afa",
-              "subOperations": [
-                {
-                  "id": "8cedeff9-53d3-4929-b7fe-43f4b3fe9448",
-                  "number1": 10,
-                  "operand": "-",
-                  "number2": 4,
-                  "result": 6,
-                  "userId": "893899f3-b189-4e59-8287-b9e361ce5afa",
-                  "subOperations": [
-                    {
-                      "id": "e0be0d32-a10c-40c0-8f9c-2e2e3db107e3",
-                      "number1": 6,
-                      "operand": "+",
-                      "number2": 5,
-                      "result": 11,
-                      "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "6061dcb9-baa2-4f38-9402-d4562d59174f",
-          "number1": 14,
-          "operand": "+",
-          "number2": 4,
-          "result": 18,
-          "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-        },
-        {
-          "id": "a7feb29c-e90a-476d-bfb8-53d8555580d8",
-          "number1": 14,
-          "operand": "-",
-          "number2": 4,
-          "result": 10,
-          "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-        }
-      ],
-      "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-    },
-    {
-      "id": "0a198e85-2432-4e6e-bdbe-fadc7fe615ec",
-      "number": 34,
-      "operations": [
-        {
-          "id": "16f33486-f143-487b-89d6-bb5e66b61c69",
-          "number1": 34,
-          "operand": "+",
-          "number2": 2,
-          "result": 36,
-          "userId": "893899f3-b189-4e59-8287-b9e361ce5afa",
-          "subOperations": [
-            {
-              "id": "cdbfa465-94cb-4c2d-87f8-1f9f6ad34164",
-              "number1": 36,
-              "operand": "+",
-              "number2": 3,
-              "result": 39,
-              "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-            }
-          ]
-        }
-      ],
-      "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-    },
-    {
-      "id": "ea4a235d-cbfa-4811-8269-1af8e33bfbc1",
-      "number": 31,
-      "operations": [],
-      "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-    },
-    {
-      "id": "83ffe7b1-f60f-4c5f-95d9-7d6df7bf20b0",
-      "number": 32,
-      "operations": [],
-      "userId": "893899f3-b189-4e59-8287-b9e361ce5afa"
-    },
-    {
-      "id": "152381d6-3e4a-47dc-a394-ba4ef21c21c1",
-      "number": 54,
-      "operations": [],
-      "userId": "7330f007-8bff-4bdc-9082-40148a91e495"
-    },
-    {
-      "id": "2599845d-7fb0-4457-acd0-2a40024eee9f",
-      "number": 10,
-      "operations": [],
-      "userId": "36314ac8-6515-4b5d-9c30-cb17ffdf3ff2"
-    },
-    {
-      "id": "fbae4c61-d3b2-475e-b79c-69caf187c37f",
-      "number": 20,
-      "operations": [
-        {
-          "id": "681624a9-309c-49bc-80ab-7f900bc90005",
-          "number1": 20,
-          "operand": "+",
-          "number2": 5,
-          "result": 25,
-          "userId": "be56922a-a862-410c-bc99-c8c9ce51ccb0"
-        }
-      ],
-      "userId": "be56922a-a862-410c-bc99-c8c9ce51ccb0"
-    },
-    {
-      "id": "6dcc2b56-7d2f-4484-abc0-7d43f3b59b06",
-      "number": 314,
-      "operations": [
-        {
-          "id": "d8ff3259-893b-4662-a3bc-5d586db79a92",
-          "number1": 314,
-          "operand": "*",
-          "number2": 2,
-          "result": 628,
+          "number2": 23,
+          "result": 68,
           "userId": "7330f007-8bff-4bdc-9082-40148a91e495",
-          "username": "admin"
+          "username": "admin",
+          "subOperations": [
+            {
+              "id": "b7b63962-0e80-4190-aa6b-2b224f7b4e18",
+              "number1": 68,
+              "operand": "+",
+              "number2": 3,
+              "result": 71,
+              "userId": "28f42565-6d23-4976-9184-f20deeb19ea2",
+              "username": "abdullah"
+            }
+          ]
         }
       ],
-      "userId": "7330f007-8bff-4bdc-9082-40148a91e495"
-    },
-    {
-      "id": "7c10d0bf-bf8c-498c-9780-3eeb16304774",
-      "number": 2122,
-      "operations": [],
       "userId": "7330f007-8bff-4bdc-9082-40148a91e495",
       "username": "admin"
+    },
+    {
+      "id": "8f17a96b-ff7b-4157-b1ac-e6a695b423cc",
+      "number": 99,
+      "operations": [
+        {
+          "id": "65183ccb-d03b-4249-80d5-8bd6ecf69078",
+          "number1": 99,
+          "operand": "/",
+          "number2": 32,
+          "result": 3.09,
+          "userId": "7330f007-8bff-4bdc-9082-40148a91e495",
+          "username": "admin",
+          "subOperations": [
+            {
+              "id": "2e68e820-5f3d-4c17-a23c-828c370cd771",
+              "number1": 3.09,
+              "operand": "/",
+              "number2": 4,
+              "result": 0.77,
+              "userId": "28f42565-6d23-4976-9184-f20deeb19ea2",
+              "username": "abdullah"
+            }
+          ]
+        }
+      ],
+      "userId": "28f42565-6d23-4976-9184-f20deeb19ea2",
+      "username": "abdullah"
     }
   ]
 }
