@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 
 router.get('/', (req, res) => {
   const data = readData();
+  console.log('Fetched calculations:', data.calculations);
   res.json(data.calculations);
 });
 
@@ -31,7 +32,10 @@ router.post('/start', (req, res) => {
     userId,
     username: user.username 
   };
+
   data.calculations.push(newCalculation);
+  console.log('Adding new calculation:', newCalculation);
+
   writeData(data);
 
   res.status(201).json(newCalculation);

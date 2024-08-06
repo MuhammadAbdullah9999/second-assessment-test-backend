@@ -32,7 +32,18 @@
               "number2": 3,
               "result": 71,
               "userId": "28f42565-6d23-4976-9184-f20deeb19ea2",
-              "username": "abdullah"
+              "username": "abdullah",
+              "subOperations": [
+                {
+                  "id": "91e2e3ee-fcff-4a6a-805c-70a39cd13c94",
+                  "number1": 71,
+                  "operand": "+",
+                  "number2": 6,
+                  "result": 77,
+                  "userId": "28f42565-6d23-4976-9184-f20deeb19ea2",
+                  "username": "abdullah"
+                }
+              ]
             }
           ]
         }

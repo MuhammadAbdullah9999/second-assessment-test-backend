@@ -1,16 +1,24 @@
 const fs = require('fs');
-const DATA_FILE = './data.json';
+const path = require('path');
+const dataFilePath = path.join(__dirname, '..', 'data.json');
 
 const readData = () => {
-  const rawData = fs.readFileSync(DATA_FILE);
-  return JSON.parse(rawData);
+  try {
+    const data = fs.readFileSync(dataFilePath, 'utf8');
+    return JSON.parse(data);
+  } catch (err) {
+    console.error('Error reading data:', err);
+    return { users: [], calculations: [] };
+  }
 };
 
 const writeData = (data) => {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
+    console.log('Data written successfully');
+  } catch (err) {
+    console.error('Error writing data:', err);
+  }
 };
 
-module.exports = {
-  readData,
-  writeData
-};
+module.exports = { readData, writeData };
