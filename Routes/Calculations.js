@@ -9,12 +9,6 @@ router.get('/', async(req, res) => {
   res.json(data.calculations);
 });
 
-router.get('/refresh', async(req, res) => {
-  const data = await readData();
-  console.log('Fetched calculations refresh:', data.calculations);
-  res.json(data.calculations);
-});
-
 router.get('/user/:userId', (req, res) => {
   const { userId } = req.params;
   const data = readData();
