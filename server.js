@@ -9,21 +9,16 @@ const app = express();
 app.use(bodyParser.json());
 
 // Define allowed origins
-const allowedOrigins = ['https://second-assessment-test-frontend.onrender.com'];
+// const allowedOrigins = ['https://second-assessment-test-frontend.onrender.com'];
 
 // CORS configuration
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin, e.g., mobile apps, curl requests
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
-  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
-};
+    origin: '*', // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these HTTP methods
+    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'] // Allow these headers
+  };
+  
+  app.use(cors(corsOptions));
 
 // Use CORS middleware
 app.use(cors(corsOptions));
