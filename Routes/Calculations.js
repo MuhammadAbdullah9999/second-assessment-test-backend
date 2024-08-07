@@ -3,9 +3,15 @@ const router = express.Router();
 const { readData, writeData } = require('../utils/fileUtils');
 const { v4: uuidv4 } = require('uuid');
 
-router.get('/', (req, res) => {
-  const data = readData();
+router.get('/', async(req, res) => {
+  const data = await readData();
   console.log('Fetched calculations:', data.calculations);
+  res.json(data.calculations);
+});
+
+router.get('/refresh', async(req, res) => {
+  const data = await readData();
+  console.log('Fetched calculations refresh:', data.calculations);
   res.json(data.calculations);
 });
 
