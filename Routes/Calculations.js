@@ -16,9 +16,9 @@ router.get('/user/:userId', (req, res) => {
   res.json(userCalculations);
 });
 
-router.post('/start', (req, res) => {
+router.post('/start', async(req, res) => {
   const { userId, number } = req.body;
-  const data = readData();
+  const data = await readData();
   const user = data.users.find(user => user.id === userId);
 
   if (!user) {
@@ -33,7 +33,7 @@ router.post('/start', (req, res) => {
     username: user.username 
   };
 
-  data.calculations.push(newCalculation);
+  await data.calculations.push(newCalculation);
   console.log('Adding new calculation:', newCalculation);
 
   writeData(data);
