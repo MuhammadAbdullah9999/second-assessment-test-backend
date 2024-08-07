@@ -8,21 +8,10 @@ const operationsRoutes = require('./Routes/Operations');
 const app = express();
 app.use(bodyParser.json());
 
-// Define allowed origins
-const allowedOrigins = ['https://second-assessment-test-frontend.onrender.com'];
-
-// CORS configuration
+// CORS configuration to allow all origins
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin, e.g., mobile apps, curl requests
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
-  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: '*', // Allow all origins
+  optionsSuccessStatus: 200
 };
 
 // Use CORS middleware
