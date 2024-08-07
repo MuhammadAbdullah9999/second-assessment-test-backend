@@ -7,9 +7,12 @@ const operationsRoutes = require('./Routes/Operations');
 
 const app = express();
 app.use(bodyParser.json());
+
+// Define allowed origins
 const allowedOrigins = ['https://second-assessment-test-frontend.onrender.com'];
 
-app.use(cors({
+// CORS configuration
+const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin, e.g., mobile apps, curl requests
     if (!origin) return callback(null, true);
@@ -18,8 +21,17 @@ app.use(cors({
       return callback(new Error(msg), false);
     }
     return callback(null, true);
-  }
-}));
+  },
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+// Use CORS middleware
+app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
+
+// Routes
 app.use('/calculations', calculationsRoutes);
 app.use('/auth', authRoutes);
 app.use('/operations', operationsRoutes);
